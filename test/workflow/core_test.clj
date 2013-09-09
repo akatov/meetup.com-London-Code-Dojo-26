@@ -9,4 +9,5 @@
 
 (deftest test-that-new-permit-can-change-to-submitted-permit-through-submit-action
   (testing "Test that new permit can change to submitted permit through submit action"
-    (is (= new-state :submitted-permit))))
+    (let [new-state (transition)]
+      (is (= new-state :submitted-permit)))))
