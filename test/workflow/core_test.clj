@@ -17,6 +17,10 @@
     (let [new-state (transition :submitted-permit)]
       (is (= new-state :approved-permit)))))
 
+(deftest test-that-submitted-permit-can-change-to-rejected-permit-through-reject-action
+  (testing "Test that submitted permit can change to approved permit through approve action"
+    (is (= new-state :rejected-permit))))
+
 (deftest test-that-transition-needs-a-state-passed-to-it
   (testing "test that if transition is called without a state parameter, it throws an exception"
     (is (thrown? clojure.lang.ArityException (transition)))))
