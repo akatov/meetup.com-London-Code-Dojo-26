@@ -11,4 +11,4 @@
   ([current-state]
      (cond
       (= current-state :new-permit) :submitted-permit
-      (= current-state :submitted-permit):approved-permit)))
+      (= current-state :submitted-permit) :approved-permit)))
