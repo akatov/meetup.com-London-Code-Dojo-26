@@ -5,3 +5,6 @@
   ([name]
      (cond
       (= name :create) :new-permit)))
+
+(defn transition []
+  :submitted-permit)
