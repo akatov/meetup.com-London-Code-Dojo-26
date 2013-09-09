@@ -14,7 +14,7 @@
 
 (deftest test-that-submitted-permit-can-change-to-approved-permit-through-approve-action
   (testing "Test that submitted permit can change to approved permit through approve action"
-    (let [new-state (transition :submitted-permit)]
+    (let [new-state (transition :submitted-permit :approve)]
       (is (= new-state :approved-permit)))))
 
 (deftest test-that-submitted-permit-can-change-to-rejected-permit-through-reject-action
