@@ -4,4 +4,5 @@
 
 (deftest create-test
   (testing "we can create a state"
-    (is (= obj :new-permit))))
+    (let [obj (create)]
+      (is (= obj :new-permit)))))
