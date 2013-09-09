@@ -1,6 +1,7 @@
 (ns workflow.core)
 
-(defn create
+(defn create-state
   ([] nil)
   ([name]
-     name))
+     (cond
+      (= name :create) :new-permit)))
