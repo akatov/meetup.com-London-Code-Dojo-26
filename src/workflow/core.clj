@@ -6,5 +6,7 @@
      (cond
       (= name :create) :new-permit)))
 
-(defn transition []
-  :submitted-permit)
+(defn transition
+  ([] :submitted-permit)
+  ([current-state]
+     :approved-permit))
