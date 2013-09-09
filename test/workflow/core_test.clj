@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [workflow.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest create-test
+  (testing "we can create a state"
+    (is (= obj :new-permit))))
