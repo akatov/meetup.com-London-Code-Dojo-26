@@ -9,4 +9,6 @@
 (defn transition
   ([] :submitted-permit)
   ([current-state]
-     :approved-permit))
+     (cond
+      (= current-state :new-permit) :submitted-permit
+      (= current-state :submitted-permit):approved-permit)))
