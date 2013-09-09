@@ -1,5 +1,6 @@
 (ns workflow.core)
 
-(defn create []
-  nil)
-
+(defn create
+  ([] nil)
+  ([name]
+     name))
