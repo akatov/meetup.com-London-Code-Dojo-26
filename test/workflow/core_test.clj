@@ -7,3 +7,6 @@
     (let [obj (create-state :create)]
       (is (= obj :new-permit)))))
 
+(deftest test-that-new-permit-can-change-to-submitted-permit-through-submit-action
+  (testing "Test that new permit can change to submitted permit through submit action"
+    (is (= new-state :submitted-permit))))
