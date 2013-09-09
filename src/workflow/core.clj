@@ -7,11 +7,12 @@
       (= name :create) :new-permit)))
 
 (defn transition
-  ([current-state]
-     (cond
-      (= current-state :new-permit) :submitted-permit))
+  ([current-state])
   ([current-state transition-name]
      (cond
+      (and (= current-state :new-permit)
+           (= transition-name :submit))
+      :submitted-permit
       (and (= current-state :submitted-permit)
            (= transition-name :approve))
       :approved-permit
