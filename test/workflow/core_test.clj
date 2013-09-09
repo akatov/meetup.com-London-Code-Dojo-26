@@ -11,3 +11,8 @@
   (testing "Test that new permit can change to submitted permit through submit action"
     (let [new-state (transition)]
       (is (= new-state :submitted-permit)))))
+
+(deftest test-that-submitted-permit-can-change-to-approved-permit-through-approve-action
+  (testing "Test that submitted permit can change to approved permit through approve action"
+    (let [new-state (transition)]
+      (is (= new-state :approved-permit)))))
